@@ -1,4 +1,4 @@
-package com.ohgiraffers.model.dto;
+package com.ohgiraffers.section01.model.dto;
 
 import java.util.List;
 
@@ -7,17 +7,17 @@ public class MenuDTO {
     private String name;
     private int price;
 
-    private List<CategoryDTO> categoryList;
+    private CategoryDTO categoryCode;
     private String orderableStatus;
 
     public MenuDTO() {
     }
 
-    public MenuDTO(int code, String name, int price, List<CategoryDTO> categoryList, String orderableStatus) {
+    public MenuDTO(int code, String name, int price, CategoryDTO categoryCode, String orderableStatus) {
         this.code = code;
         this.name = name;
         this.price = price;
-        this.categoryList = categoryList;
+        this.categoryCode = categoryCode;
         this.orderableStatus = orderableStatus;
     }
 
@@ -45,12 +45,12 @@ public class MenuDTO {
         this.price = price;
     }
 
-    public List<CategoryDTO> getCategoryList() {
-        return categoryList;
+    public CategoryDTO getCategoryCode() {
+        return categoryCode;
     }
 
-    public void setCategoryList(List<CategoryDTO> categoryList) {
-        this.categoryList = categoryList;
+    public void setCategoryCode(CategoryDTO categoryCode) {
+        this.categoryCode = categoryCode;
     }
 
     public String getOrderableStatus() {
@@ -67,7 +67,7 @@ public class MenuDTO {
                 "code=" + code +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", categoryList=" + categoryList +
+                ", categoryList=" + categoryCode +
                 ", orderableStatus='" + orderableStatus + '\'' +
                 '}';
     }

@@ -1,4 +1,4 @@
-package com.ohgiraffers.model.dto;
+package com.ohgiraffers.section01.model.dto;
 
 public class CategoryDTO {
 
@@ -6,8 +6,7 @@ public class CategoryDTO {
     private String name;
     private Integer refCategoryCode; //null값을 불러오기 위해서는 Integer사용
 
-    public CategoryDTO() {
-    }
+    public CategoryDTO() {}
 
     public CategoryDTO(int code, String name, Integer refCategoryCode) {
         this.code = code;

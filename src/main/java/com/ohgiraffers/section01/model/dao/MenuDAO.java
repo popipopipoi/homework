@@ -1,7 +1,7 @@
 package com.ohgiraffers.section01.model.dao;
 
-import com.ohgiraffers.model.dto.CategoryDTO;
-import com.ohgiraffers.model.dto.MenuDTO;
+import com.ohgiraffers.section01.model.dto.CategoryDTO;
+import com.ohgiraffers.section01.model.dto.MenuDTO;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -81,7 +81,7 @@ public class MenuDAO {
             pstmt = con.prepareStatement(query);
             pstmt.setString(1, newMenu.getName());
             pstmt.setInt(2,newMenu.getPrice());
-            pstmt.setObject(3,newMenu.getCategoryList());
+            pstmt.setObject(3,newMenu.getCategoryCode());
             pstmt.setString(4, newMenu.getOrderableStatus());
 
             result = pstmt.executeUpdate();
