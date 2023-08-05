@@ -81,7 +81,7 @@ public class MenuDAO {
             pstmt = con.prepareStatement(query);
             pstmt.setString(1, newMenu.getName());
             pstmt.setInt(2,newMenu.getPrice());
-            pstmt.setObject(3,newMenu.getCategoryCode());
+            pstmt.setObject(3,newMenu.getCategoryCode().getCode());
             pstmt.setString(4, newMenu.getOrderableStatus());
 
             result = pstmt.executeUpdate();
